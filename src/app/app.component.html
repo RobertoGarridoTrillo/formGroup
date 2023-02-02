@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row mt-3">
+    <form [formGroup]="formularioContacto" (ngSubmit)="submit()">
+
+      <fieldset>
+        <legend>Formulario</legend>
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" id="nombre" class="form-control" formControlName="nombre">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">mail</label>
+          <input type="email" id="email" class="form-control" formControlName="mail">
+        </div>
+        <div class="mb-3">
+          <label for="textArea" class="form-label">Example textarea</label>
+          <textarea class="form-control" id="textArea" rows="3" formControlName="mensaje"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </fieldset>
+    </form>
+    <div>{{datos}}</div>
+  </div>
+</div>
